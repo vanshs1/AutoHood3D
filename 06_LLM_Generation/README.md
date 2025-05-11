@@ -27,7 +27,8 @@ This directory provides a set of Python scripts and associated data for generati
 
 ## Dependencies
 
-- Python 3.8+  
+- Cuda v12.1.1
+- Python 3.11.5 
 - PyVista (or your preferred STL‐rendering library)  
 - Multiprocessing (built‑in)  
 - Any JSON utilities (e.g. built‑in `json` module)
