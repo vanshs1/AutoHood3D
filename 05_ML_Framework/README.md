@@ -1,44 +1,61 @@
-# LLM Prompt Generation for Hood Geometry
+# ML Framework
 
-This directory provides a set of Python scripts and associated data for generating, organizing, and consolidating natural‑language prompts paired with 3D automotive‑hood models. These prompts can be used for supervised fine‑tuning of vision‑language models in CAD‑driven generative‑AI workflows.
+This directory contains scripts and configuration files for training and evaluating machine‑learning surrogate models on the AutoHood3D dataset. Two model families are supported—point‑cloud and graph‑based—and utilities for visualizing training losses.
 
-## Contents
+---
 
-- `01_Images_STL_multiproc_v1.py`  
-  Loads all STL files in `dataset/`, renders orthographic projections (or other view angles) in parallel, and writes the resulting images into `sample_data/`.
+## Directory Contents
 
-- `02_CreateDataset_Hood_FB_v1.py`  
-  Parses rendered images and base parameters (e.g., curve count, spacing, symmetry) to generate initial per‑model JSON prompts.
+- **models/**  
+  Model architecture definitions.
 
-- `03_Consolidate_all_prompts_v1.py`  
-  Merges individual JSON prompt files into a single `Final_consolidated_prompts.json` ready for LLM fine‑tuning.
+- **package.list**  
+  Pinfile listing required Python packages and versions.
 
-- `sample_data/`  
-  Example STL files and parameter definitions for testing the pipeline.
+- **ML_train_pointModels.py**  
+  Training pipeline for point‑cloud architectures (e.g., MLP, PointNet).  
+  - Loads point‑cloud inputs and target fields (U, p, D)  
+  - Configures dataset splits, data loaders, and augmentation  
+  - Trains models with Adam optimizer and ReduceLROnPlateau scheduler  
+  - Outputs model weights and training logs to user defined folder
 
-- `output_baseSkins/`  
-  Generated images from the base STL models (used for creating baseSkins_prompts.json).
+- **ML_train_graphModels.py**  
+  Training pipeline for graph‑based architectures (e.g., GraphSAGE, Graph U‑Net, PointGNNConv).  
+  - Constructs `torch_geometric.data.Data` graphs from mesh connectivity  
+  - Follows analogous training loop with graph‑specific modules  
+  - Outputs model weights and training logs to user defined folder
 
-- `baseSkins_prompts.json`  
-  Intermediate prompt dataset used by script 02.
+- **JSON_ML_Loss_plots.py**  
+  Utility to parse training/validation loss JSON logs and generate comparative loss curves.  
+  - Produces `.png` or `.pdf` figures summarizing convergence behavior  
+  - Supports multiple model runs and custom legend labels
 
-- `Final_consolidated_prompts.json`  
-  Final, merged prompt dataset suitable for direct LLM ingestion.
+---
 
 ## Dependencies
+
 - Cuda v12.1.1
 - Python 3.11.5
 - PyVista (or your preferred STL‐rendering library)  
 - Multiprocessing (built‑in)  
 - Any JSON utilities (e.g. built‑in `json` module)
 
-Install required packages:
-Gemma 3 is supported starting from transformers 4.50.0.
+Install dependencies from `package.list`
 
+---
+
+## Usage
+- **Edit the training hyperparameters at the top of each file** 
 ```bash
-pip install pyvista
-pip install -U transformers
+CUDA_VISIBLE_DEVICES=0 torchrun --standalone --nproc_per_node=1 ML_train_<model>.py >& output.log 2>&1
 ```
+
+- **Plot training losses** 
+```bash
+python JSON_ML_Loss_plots.py
+```
+Trained models and loss plots will appear under your specified output directory.
+
 ---
 
 ##  License
@@ -46,6 +63,3 @@ pip install -U transformers
 CC BY-NC 4.0 License. See the `LICENSE` file for details.
 
 ---
-
-
-
