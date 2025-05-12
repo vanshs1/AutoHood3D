@@ -1,9 +1,9 @@
 # AutoHood3D
 
-**A multimodal benchmark for 3D automotive hood design and fluid–structure interaction**
+**A Multi‑Modal Benchmark for Automotive Hood Design and Fluid–Structure Interaction**
 
 > AutoHood3D is an open‑source dataset and framework comprising over 16 000 parametric hood geometries with coupled high‑fidelity LES–FEA simulations. 
-It supports CAD‑driven generative‑AI, surrogate modeling, physics‑informed ML, and LLM fine‑tuning workflows. 
+It supports CAD‑driven generative‑AI, surrogate modeling, physics‑informed ML, and LLM fine‑tuning. 
 
 ---
 
@@ -30,9 +30,12 @@ This work is licensed under a
 ## 📥 Dataset Access
 
 - **Harvard Dataverse**: 
-	- Base Hood Skins:  [https://doi.org/10.7910/DVN/9268BB](https://doi.org/10.7910/DVN/9268BB)  
+	- Base Hood Skins:  [https://doi.org/10.7910/DVN/9268BB](https://doi.org/10.7910/DVN/9268BB) 
+	- Dataset 4k Hoods STLs: [https://doi.org/10.7910/DVN/HEILMB](https://doi.org/10.7910/DVN/HEILMB)    
 	- ML-PreSplit for 4k Hoods: [https://doi.org/10.7910/DVN/6OAFF8](https://doi.org/10.7910/DVN/6OAFF8)  
-	- ML (Graph)-PreSplit for 4k Hoods: [https://doi.org/10.7910/DVN/WODNWY](https://doi.org/10.7910/DVN/WODNWY)  
+	- ML (Graph)-PreSplit for 4k Hoods: [https://doi.org/10.7910/DVN/WODNWY](https://doi.org/10.7910/DVN/WODNWY)
+	- Dataset 12k Hoods STLs: [https://doi.org/10.7910/DVN/Z0VXLI](https://doi.org/10.7910/DVN/Z0VXLI) 
+	 
 
 - **LLM SFT Prompts for Point Clouds**:
 	 - 06_LLM_Generation/Final_consolidated_prompts.jsonl
@@ -86,11 +89,11 @@ Issues and pull requests welcome via GitHub.
 ---
 
 ## 📬 Contact
-Authors: 
+**Authors:** 
     - Vansh Sharma, Harish Jai Ganesh, Maryam Akram, Wanjiao Liu and Venkat Raman
     - Email at: vanshs@umich.edu and ramanvr@umich.edu
 
-Research Group: 
+**Research Group:**
     - [Advanced Propulsion Concepts Lab](https://sites.google.com/umich.edu/apcl/home?authuser=0)  
     - Department of Aerospace Engineering, University of Michigan, Ann Arbor
 
