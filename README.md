@@ -5,6 +5,9 @@
 > AutoHood3D is an open‑source dataset and framework comprising over 16 000 parametric hood geometries with coupled high‑fidelity LES–FEA simulations. 
 It supports CAD‑driven generative‑AI, surrogate modeling, physics‑informed ML, and LLM fine‑tuning. 
 
+
+![Dataset Workflow and Modalities](CroissantData/Modalities.png)
+
 ---
 
 ## 🛠️ REPOSITORY UPDATES
