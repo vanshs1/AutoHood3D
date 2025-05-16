@@ -32,9 +32,12 @@ This work is licensed under a
 - **Harvard Dataverse**: 
 	- Base Hood Skins:  [https://doi.org/10.7910/DVN/9268BB](https://doi.org/10.7910/DVN/9268BB) 
 	- Dataset 4k Hoods STLs: [https://doi.org/10.7910/DVN/HEILMB](https://doi.org/10.7910/DVN/HEILMB)    
+	- Dataset 4k Hoods Sim Data: [https://doi.org/10.7910/DVN/VCKOK5](https://doi.org/10.7910/DVN/VCKOK5)  
 	- ML-PreSplit for 4k Hoods: [https://doi.org/10.7910/DVN/6OAFF8](https://doi.org/10.7910/DVN/6OAFF8)  
 	- ML (Graph)-PreSplit for 4k Hoods: [https://doi.org/10.7910/DVN/WODNWY](https://doi.org/10.7910/DVN/WODNWY)
+	- Test ML Workflow for 100 Hoods (from 4k set): [https://doi.org/10.7910/DVN/FSYRJA](https://doi.org/10.7910/DVN/FSYRJA)
 	- Dataset 12k Hoods STLs: [https://doi.org/10.7910/DVN/Z0VXLI](https://doi.org/10.7910/DVN/Z0VXLI) 
+	- Dataset 12k Hoods STLs (random): [https://doi.org/10.7910/DVN/OJXIS1](https://doi.org/10.7910/DVN/OJXIS1) 
 	 
 
 - **LLM SFT Prompts for Point Clouds**:
