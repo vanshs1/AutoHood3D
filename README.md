@@ -21,6 +21,7 @@ Shield: [![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc]
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial 4.0 International License][cc-by-nc].
+**Licensing note:** The dataset is licensed under **CC BY-NC 4.0**, and the code is licensed under the **PolyForm Noncommercial License 1.0.0**. For commercial usage, please contact the authors.
 
 [![CC BY-NC 4.0][cc-by-nc-image]][cc-by-nc]
 
